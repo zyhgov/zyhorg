@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>大数据技术集群环境搭建-zyhgov</title>
+    <link rel="shortcut icon" href="https://zyhgov.gitee.io/zyh/ZhangYongHao/asset/logo001.png" type="image/x-icon" />
+    <meta name="description" content="大数据技术集群环境搭建-zyhgov">
+    <meta name="generator" content="VitePress v1.0.0-rc.33">
+    <link rel="preload stylesheet" href="./assets/style.NFYjT1by.css" as="style">
+    
+    <script type="module" src="./assets/app.E5NrRX5T.js"></script>
+    <link rel="modulepreload" href="./assets/chunks/framework.riqP6gDW.js">
+    <link rel="modulepreload" href="./assets/chunks/VPApp.vue_vue_type_style_index_0_scoped_de27aa24_lang.NwukS_Ej.js">
+    <link rel="modulepreload" href="./assets/chunks/VTLink.vue_vue_type_script_setup_true_lang.QkJKikgR.js">
+    <link rel="modulepreload" href="./assets/chunks/PreferenceSwitch.6LWMZekz.js">
+    <link rel="modulepreload" href="./assets/chunks/VTIconX.z_05PB8M.js">
+    <link rel="modulepreload" href="./assets/chunks/VTIconChevronLeft.zPBA8XaT.js">
+    <link rel="modulepreload" href="./assets/chunks/SponsorsGroup.GLO9-BWp.js">
+    <link rel="modulepreload" href="./assets/index.md.jMSDTPtf.lean.js">
+    <link rel="prefetch" href="./assets/chunks/VPAlgoliaSearchBox.zgAo1ypL.js">
+    <meta property="og:description" content="大数据技术集群环境搭建">
+    <link rel="preload" href="./assets/inter-roman-latin.bvIUbFQP.woff2" as="font" type="font/woff2" crossorigin="">
+  </head>
+  <body>
+    <div id="app">
+      <div class="VPApp" data-v-de27aa24>
+        <header class="VPNav nav-bar stick" data-v-de27aa24 data-v-60a5c4bb>
+          <div class="VPNavBar" data-v-60a5c4bb data-v-b15b4b37>
+            <div class="container" data-v-b15b4b37>
+              <a class="VPNavBarTitle" href="../index.html" data-v-b15b4b37 data-v-e9cb7cd5>
+                <img src="https://datawarehouse-7gl81i6ib89c2edd-1314221350.tcloudbaseapp.com/logo/logo001.png" alt="logo" width="170px">
+                
+              </a>
+              <div class="content" data-v-b15b4b37>
+                <p style="font-size: 1.5em;">ZYHGOV™ Linux 大数据环境平台的搭建&nbsp;&nbsp;&nbsp;</p>
+    
+                  <!--[-->
+    
+                  <!--[-->
+                  <div class="vt-flyout VPNavBarMenuGroup" data-v-9b494740 data-v-93e4270e><button type="button" class="vt-flyout-button" aria-haspopup="true" aria-expanded="false">
+    
+                      <!--[--><span class="vt-flyout-button-text" style="font-size: 1.5em;font-weight: 600;">环境搭建技术文档 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="vt-flyout-button-text-icon"><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span>
+    
+                      <!--]-->
+                    </button>
+                    <div class="vt-flyout-menu">
+                      <div class="vt-menu">
+                        <div class="vt-menu-items">
+    
+                                                    <a class="vt-link link vt-menu-link" href="./file.html#home" target="_blank" rel="noopener noreferrer">
+                            说明
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#docker" target="_blank" rel="noopener noreferrer">
+                            docker
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#jdk" target="_blank" rel="noopener noreferrer">
+                            jdk
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#zookeeper" target="_blank" rel="noopener noreferrer">
+                            zookeeper
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#hadoop" target="_blank" rel="noopener noreferrer">
+                            Hadoop
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#hadoop-ha" target="_blank" rel="noopener noreferrer">
+                            Hadoop HA
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#hbase" target="_blank" rel="noopener noreferrer">
+                            hbase
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#flume" target="_blank" rel="noopener noreferrer">
+                            flume
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                              <path d="M0 0h24v24H0V0z" fill="none"></path>
+                              <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                            </svg>
+                          </a>
+                          <a class="vt-link link vt-menu-link" href="./file.html#hive" target="_blank" rel="noopener noreferrer">
+                            hive
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                            <path d="M0 0h24v24H0V0z" fill="none"></path>
+                            <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                          </svg>
+                        </a>
+                        <a class="vt-link link vt-menu-link" href="./file.html#spark" target="_blank" rel="noopener noreferrer">
+                          spark
+                          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                          <path d="M0 0h24v24H0V0z" fill="none"></path>
+                          <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                        </svg>
+                      </a>
+                      <a class="vt-link link vt-menu-link" href="./file.html#kafka" target="_blank" rel="noopener noreferrer">
+                        Kafka
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                        <path d="M0 0h24v24H0V0z" fill="none"></path>
+                        <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                      </svg>
+                    </a>
+                    <a class="vt-link link vt-menu-link" href="./file.html#flink" target="_blank" rel="noopener noreferrer">
+                      flink
+                      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                      <path d="M0 0h24v24H0V0z" fill="none"></path>
+                      <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                    </svg>
+                  </a>
+                  <a class="vt-link link vt-menu-link" href="./file.html#hudi" target="_blank" rel="noopener noreferrer">
+                    hudi
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                  </svg>
+                </a>
+                <a class="vt-link link vt-menu-link" href="./file.html#clickhouse" target="_blank" rel="noopener noreferrer">
+                  clickhouse
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                  <path d="M0 0h24v24H0V0z" fill="none"></path>
+                  <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+                </svg>
+              </a>      
+              <a class="vt-link link vt-menu-link" href="./file.html#mysql" target="_blank" rel="noopener noreferrer">
+                MySQL
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" height="24px" viewbox="0 0 24 24" width="24px" class="vt-link-icon">
+                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"></path>
+              </svg>
+            </a>
+    
+    
+                          <!--]-->
+    
+                          <!--]-->
+                        </div>
+    
+                        <!--[-->
+    
+                        <!--]-->
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!--]-->
+    
+                  
+    
+          <!---->
+        </header>
+    
+        <!---->
+    
+        <!---->
+        <div id="VPContent" class="VPContent" data-v-de27aa24 data-v-90270ef9>
+          <div class="VPContentPage" data-v-90270ef9>
+            <main>
+              <div style="position:relative;">
+                <div>
+    
+                  <!--[-->
+                  <section id="hero" data-v-9e9e3e87>
+                    <h1 class="tagline" data-v-9e9e3e87><span class="accent" data-v-9e9e3e87>大数据</span><br data-v-9e9e3e87>
+                    Linux 集群环境搭建</h1>
+                    <p class="description" data-v-9e9e3e87> 易学易用，解释透彻，适用场景于大数据技术专业或本专业技能大赛。 </p>
+                    <p class="actions" data-v-9e9e3e87><a class="get-started" href="file.html" target="_blank" data-v-9e9e3e87> 快速开始 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" data-v-9e9e3e87>
+                          <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" data-v-9e9e3e87></path>
+                        </svg></a><a class="setup" href="../news/应用收录/filecpdsj1.html" target="_blank" data-v-9e9e3e87>下载压缩包</a></p>
+                  </section>
+                  <section id="special-sponsor" data-v-9e9e3e87>
+                    <iframe id="ifr_top" src="https://yyh-0g819f773243d38b-1314221350.tcloudbaseapp.com/globe/index.html" width="100%" height="666" scrolling="no" marginheight="0" frameborder="0"></iframe>
+                    <!---->
+                  </section>
+                  <section id="highlights" class="vt-box-container" data-v-9e9e3e87>
+                    <div class="vt-box" data-v-9e9e3e87>
+                      <h2 data-v-9e9e3e87>标准解释</h2>
+                      <p data-v-9e9e3e87> 基于标准apache官网释义进行编排。 </p>
+                    </div>
+                    <div class="vt-box" data-v-9e9e3e87>
+                      <h2 data-v-9e9e3e87>经验丰富</h2>
+                      <p data-v-9e9e3e87>经过编写人员多次报错而总结而出的经验</p>
+                    </div>
+                    <div class="vt-box" data-v-9e9e3e87>
+                      <h2 data-v-9e9e3e87>极度适配</h2>
+                      <p data-v-9e9e3e87> 丰富的代码片段供您快速上手。 </p>
+                    </div>
+                  </section>
+                  <section id="sponsors" data-v-9e9e3e87>
+                    <h2 data-v-9e9e3e87>网站所有机构</h2>
+                    <div class="sponsor-container platinum landing" data-v-9e9e3e87 data-v-ae26ae77>
+    
+                      <a href="#" class="sponsor-item action" data-v-ae26ae77>
+                        <img src="https://datawarehouse-7gl81i6ib89c2edd-1314221350.tcloudbaseapp.com/logo/logo001.png" alt="" width="250px">
+                      </a>
+                      <a href="#" class="sponsor-item action" data-v-ae26ae77>
+                        <img src="https://yyh-0g819f773243d38b-1314221350.tcloudbaseapp.com/img-hzhb/zyhgov.png" alt="" width="250px">
+                      </a>
+                      <a href="#" class="sponsor-item action" data-v-ae26ae77>
+                        <img src="https://yyh-0g819f773243d38b-1314221350.tcloudbaseapp.com/img/logo2.png" alt="" width="100px">
+                      </a>
+                    </div>
+                  </section>
+                  
+    
+                  <!--]-->
+                </div>
+              </div>
+            </main>
+    
+            <!--[-->
+    
+            <!--]-->
+            <div class="VPFooter" data-v-2dbc0055>
+              <p class="license" data-v-2dbc0055><a class="vt-link link link" href="#" target="_blank" rel="noopener noreferrer" data-v-2dbc0055>
+    
+                  <!--[-->版权声明
+    
+                  <!--]-->
+    
+                  <!---->
+                </a></p>
+              <p class="copyright" data-v-2dbc0055>本中文文档采用 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 (CC BY-NC-SA 4.0) 进行许可。</p>
+            </div>
+    
+            <!--[-->
+    
+            <!--]-->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

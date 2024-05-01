@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据技术集群环境搭建技术文档网站-zyhgov</title>
+    <link rel="shortcut icon" href="https://zyhgov.gitee.io/zyh/ZhangYongHao/asset/logo001.png" type="image/x-icon" />
+    <style>
+        /* 美化样式 - 改进版 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            background-image: linear-gradient(to right, #0c2442, #335270, #517693);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            padding: 20px;
+            color: #ffffff;
+        }
+        .sidebar img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #00adb9;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.2em;
+            font-family: 华文中宋;
+        }
+        .sidebar ul li:hover,
+        .sidebar ul .nav-item.active {
+            background-color: #75f8ff80;
+        }
+        .sidebar ul li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            padding-left: 20px;
+        }
+        .sidebar ul li a:hover {
+            color: #42b875;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            /* background-color: #ffffff; */
+            background-image: linear-gradient(to right, #fbfeff, #eafefe, #d8fffe);
+            min-height: calc(100vh - 40px); /* 让主体内容区域高度至少填满视窗高度减去顶部和底部空白 */
+        }
+        .content-placeholder {
+            border: 1px solid #006288;
+            padding: 2em;
+            margin-bottom: 20px;
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 侧边导航栏 -->
+
+<div class="sidebar">
+    <!-- <img src="https://datawarehouse-7gl81i6ib89c2edd-1314221350.tcloudbaseapp.com/logo/logo001.png" alt="logo" width="200px"> -->
+    <img src="../asset/logo/logo.png" alt="logo" width="100%">
+    
+    <ul>
+        <li class="nav-item" href="#home" onclick="handleNavItemClick(event, 'home')">说明</li>
+        <li class="nav-item" href="#docker" onclick="handleNavItemClick(event, 'docker')">Docker</li>
+        <li class="nav-item" href="#jdk" onclick="handleNavItemClick(event, 'jdk')">JDK</li>
+        <li class="nav-item" href="#zookeeper" onclick="handleNavItemClick(event, 'zookeeper')">ZooKeeper</li>
+        <li class="nav-item" href="#hadoop" onclick="handleNavItemClick(event, 'hadoop')">Hadoop</li>
+        <li class="nav-item" href="#hadoop-ha" onclick="handleNavItemClick(event, 'hadoop-ha')">Hadoop HA</li>
+        <li class="nav-item" href="#hbase" onclick="handleNavItemClick(event, 'hbase')">HBase</li>
+        <li class="nav-item" href="#flume" onclick="handleNavItemClick(event, 'flume')">Flume</li>
+        <li class="nav-item" href="#hive" onclick="handleNavItemClick(event, 'hive')">Hive</li>
+        <li class="nav-item" href="#spark" onclick="handleNavItemClick(event, 'spark')">Spark</li>
+        <li class="nav-item" href="#kafka" onclick="handleNavItemClick(event, 'kafka')">Kafka</li>
+        <li class="nav-item" href="#flink" onclick="handleNavItemClick(event, 'flink')">Flink</li>
+        <li class="nav-item" href="#hudi" onclick="handleNavItemClick(event, 'hudi')">Hudi</li>
+        <li class="nav-item" href="#clickhouse" onclick="handleNavItemClick(event, 'clickhouse')">ClickHouse</li>
+        <li class="nav-item" href="#mysql" onclick="handleNavItemClick(event, 'mysql')">MySQL</li>
+    </ul>
+    <p style="font-size: 1.2em;font-family: 黑体;font-weight: 500;float: left;"><a href="./index.html" target="_blank" style="color: #ffffff;">回到首页</a></p>
+    <p style="font-size: 1.2em;font-family: 黑体;font-weight: 500;float: left;color: #ffffff;">杖雍皓™保留所有权利</p>
+    <img src="../asset/logo/logo180.png" alt="logo" width="100%">
+</div>
+
+<!-- 主要内容区域 -->
+<div class="main-content">
+
+    <div id="home" class="content-placeholder active">
+        <div class="markdown-content" id="homeContent"></div>
+    </div>
+    <div id="docker" class="content-placeholder">
+        <div class="markdown-content" id="dockerContent"></div>
+    </div>
+    
+    <!-- JDK 内容区域 -->
+    <div id="jdk" class="content-placeholder">
+        <div class="markdown-content" id="jdkContent"></div>
+    </div>
+
+    <!-- 其他内容区域以此类推... -->
+
+    <!-- ZooKeeper 内容区域 -->
+    <div id="zookeeper" class="content-placeholder">
+        <div class="markdown-content" id="zookeeperContent"></div>
+    </div>
+    <!-- Hadoop 内容区域 -->
+    <div id="hadoop" class="content-placeholder">
+        <div class="markdown-content" id="hadoopContent"></div>
+    </div>
+    <!-- Hadoop HA 内容区域 -->
+    <div id="hadoop-ha" class="content-placeholder">
+        <div class="markdown-content" id="hadoop-haContent"></div>
+    </div>
+    <!-- HBase 内容区域 -->
+    <div id="hbase" class="content-placeholder">
+        <div class="markdown-content" id="hbaseContent"></div>
+    </div>
+    <!-- Flume 内容区域 -->
+    <div id="flume" class="content-placeholder">
+        <div class="markdown-content" id="flumeContent"></div>
+    </div>
+    <!-- Hive 内容区域 -->
+    <div id="hive" class="content-placeholder">
+        <div class="markdown-content" id="hiveContent"></div>
+    </div>
+    <!-- Spark 内容区域 -->
+    <div id="spark" class="content-placeholder">
+        <div class="markdown-content" id="sparkContent"></div>
+    </div>
+    <!-- Kafka 内容区域 -->
+    <div id="kafka" class="content-placeholder">
+        <div class="markdown-content" id="kafkaContent"></div>
+    </div>
+    <!-- Flink 内容区域 -->
+    <div id="flink" class="content-placeholder">
+        <div class="markdown-content" id="flinkContent"></div>
+    </div>
+    <!-- Hudi 内容区域 -->
+    <div id="hudi" class="content-placeholder">
+        <div class="markdown-content" id="hudiContent"></div>
+    </div>
+    <!-- ClickHouse 内容区域 -->
+    <div id="clickhouse" class="content-placeholder">
+        <div class="markdown-content" id="clickhouseContent"></div>
+    </div>
+    <!-- MySQL 内容区域 -->
+    <div id="mysql" class="content-placeholder">
+        <div class="markdown-content" id="mysqlContent"></div>
+    </div>
+</div>
+
+<script>
+    function handleNavItemClick(event, id) {
+    event.preventDefault();
+
+    // 更新URL地址（可选，根据需求决定是否启用）
+    history.pushState(null, null, '#' + id);
+
+    // 加载内容
+    loadContent(id, `./data/${id}.html`);
+
+    // 切换内容区域并高亮当前导航项
+    switchContent(id);
+    // highlightActiveNavItem();
+
+    // 滚动到目标内容区域
+    const targetSection = document.getElementById(id);
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    let navItemToHighlight = document.querySelector(`.nav-item[href="#${id}"]`);
+    let navItems = document.querySelectorAll('.sidebar li.nav-item');  // 添加这行以获取navItems
+    if (navItemToHighlight) {
+        deactivateAllNavItems(navItems);
+        navItemToHighlight.classList.add('active');
+    }
+}
+    function switchContent(id) {
+        var elements = document.getElementsByClassName('content-placeholder');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].classList.remove('active');
+        }
+        document.getElementById(id).classList.add('active');
+    }
+
+    function loadContent(id, filePath) {
+        fetch(filePath)
+            .then(response => response.ok ? response.text() : Promise.reject(response))
+            .then(data => {
+                const contentElement = document.getElementById(`${id}Content`);
+                contentElement.innerHTML = data;
+                // 切换内容区域的可见性
+                switchContent(id);
+            })
+            .catch(error => console.error('Error loading content:', error));
+    }
+
+    function highlightActiveNavItem() {
+        var elements = document.getElementsByClassName('content-placeholder');
+        var rect, navItems = document.querySelectorAll('.sidebar li.nav-item');
+        for (let i = 0; i < elements.length; i++) {
+            rect = elements[i].getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                let navItem = document.querySelector(`.nav-item[href="#${elements[i].id}"]`);
+                if (navItem) {
+                    deactivateAllNavItems(navItems);
+                    navItem.classList.add('active');
+                    break;
+                }
+            }
+        }
+    }
+
+    function deactivateAllNavItems(navItems) {
+        for (let item of navItems) {
+            item.classList.remove('active');
+        }
+    }
+
+    // 监听滚动事件和窗口大小变化事件
+    window.addEventListener('scroll', highlightActiveNavItem, { passive: true });
+    window.addEventListener('resize', highlightActiveNavItem);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // 初始化加载内容
+        loadContent('home', './data/home.html');
+        loadContent('docker', './data/docker.html');
+        loadContent('jdk', './data/jdk.html');
+        loadContent('zookeeper', './data/zookeeper.html');
+        loadContent('hadoop', './data/hadoop.html');
+        loadContent('hadoop-ha', './data/hadoop-ha.html');
+        loadContent('hbase', './data/hbase.html');
+        loadContent('flume', './data/flume.html');
+        loadContent('hive', './data/hive.html');
+        loadContent('spark', './data/spark.html');
+        loadContent('kafka', './data/kafka.html');
+        loadContent('flink', './data/flink.html');
+        loadContent('hudi', './data/hudi.html');
+        loadContent('clickhouse', './data/clickhouse.html');
+        loadContent('mysql', './data/mysql.html');
+
+        // 给每个导航栏项添加点击事件
+        // let navItems = document.querySelectorAll('.sidebar li.nav-item');
+        // navItems.forEach(item => {
+        //     item.addEventListener('click', function(event) {
+        //         event.preventDefault();
+        //         let targetId = this.getAttribute('href').substring(1);
+        //         loadContent(targetId, `./data/${targetId}.html`);
+        //         // highlightActiveNavItem();
+        //     });
+        // });
+
+        // 首次加载时执行highlightActiveNavItem
+        highlightActiveNavItem();
+    });
+</script>
+
+</body>
+</html>
