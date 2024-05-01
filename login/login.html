@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="这是WWW.ZYHGOV.CN的官方网站, 杖雍皓(张永豪)倾其所有为之建设, 此页面为学号登录检查">
+  <meta name="keywords" content="zyhgov, 杖雍皓, 张永豪, 学号登录检查">
+  <title>权限验证检查</title>
+  <meta name="baidu-site-verification" content="codeva-AR4OZ9Sozr" />
+  <link href="../asset/logo001.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="logon.css">
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://datawarehouse-7gl81i6ib89c2edd-1314221350.tcloudbaseapp.com/图片文件/logo.png" alt="Logo">
+    <form id="login-form">
+      <label for="studentid"><img src="https://zyhgov.gitee.io/zyh/logon/%E5%A5%BD%E5%8F%8B.svg" alt="您的学号" width="30px"/>  您的学号 ：</label>
+      <input type="text" id="studentid" name="studentid" placeholder="须为系统收录学号" required pattern="^(22200|23200)\d{4}$" title="须为系统收录学号" onblur="checkstudentid()"><span id="studentidValidation"></span>
+      <br>
+      <label for="password"><img src="https://zyhgov.gitee.io/zyh/logon/keywords.svg" alt="您的学号" width="30px" />  您的密钥 ：</label>
+      <input type="password" id="password" name="password" placeholder="姓名首字母 + 123456" required pattern="^(?=.*\d)(?=.*[a-zA-Z]).{8,}$" title="提示：默认密码必须为学号对应之拼音首字母 + 123456" onblur="checkPassword(); checkstudentidValidation();" ><span id="passwordValidation"></span>
+      <br>
+      <input type="submit" value="登录" onclick="login()">
+      <button type="button" onclick="seekHelp()" >寻求帮助</button>
+      <p id="visitCount" style="color: aqua;text-align: center;font-size: 20px;font-family: 黑体;">您使用当前设备地址打开此网站 0 次</p>
+      <p style="text-align: center;color: #ffffff;font-size: 18px;font-size: 华文中宋;"><img src="https://zyhgov.gitee.io/zyh/img/toubu/logo.png" alt="" width="80" /> Admin:杖雍皓(张永豪) | 版本号:24.4.17</p>
+    </form>
+    
+  </div>
+  <script type="text/javascript" src="logon.js"></script>
+</body>
+</html>
